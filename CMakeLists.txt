@@ -8,7 +8,7 @@ endif(WIN32)
 set(CMAKE_CXX_STANDARD 17)
 enable_testing()
 
-find_package(sqlite3 CONFIG REQUIRED)
+find_package(unofficial-sqlite3 CONFIG REQUIRED)
 find_package(GTest CONFIG REQUIRED)
 
 add_library(SQLib
@@ -33,5 +33,5 @@ target_link_libraries(SQLibTest
   PRIVATE
 	GTest::gtest
 	SQLib
-	sqlite3
+	unofficial::sqlite3::sqlite3
 )
